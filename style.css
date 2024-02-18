@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+:root{
+    --text-color: #fff;
+    --bg-color: #001625;
+    --blue-color: #14a1e8;
+    --item-bg-color: #00263e;
+    ---second-item-bg-color: #002e4b;
+    ---section-color: #002036;
+}
+html{
+    font-size: 62.5%;
+}
+section{
+    background-color: var(---section-color);
+    min-height: 100vh;
+    padding: 0 8%;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 12rem;
+    z-index: 99;
+    background-color: var(--bg-color);
+}
+header #menu{
+    display: none;
+}
+header nav a{
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 2.2rem;
+    margin-left: 4rem;
+    transition: .2s;
+}
+header nav a:hover,
+header nav .active{
+    color: var(--blue-color);
+}
+.Home{
+    background-color: var(--bg-color);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    color: var(--text-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Home .content-box{
+    width: 50%;
+    text-align: start;
+    display: flex;
+    align-items: center;
+    z-index: 3;
+}
+.Home .text-box h1{
+    font-size: 3.8rem;
+}
+.Home .text-box .skills{
+    color: var(--blue-color);
+}
+.Home .text-box p{
+    font-size: 1.4rem;
+    margin: 2.5rem 0;
+}
+.Home .content-box .icon-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 3rem;
+    height: 20rem;
+}
+.Home .content-box .icon-box i{
+    border: .2rem solid var(--blue-color);
+    border-radius: 50%;
+    font-size: 2.5rem;
+    padding: .6rem;
+    color: var(--blue-color);
+    cursor: pointer;
+    transition: .2s;
+}
+.Home .content-box .icon-box i:hover{
+    color: var(--text-color);
+    background-color: var(--blue-color);
+    box-shadow: 0 0 1.5rem var(--blue-color);
+}
+.btn{
+    color: var(--text-color);
+    width: 17rem;
+    height: 4.3rem;
+    border: .2rem solid var(--blue-color);
+    background-color: var(--blue-color);
+    font-size: 2rem;
+    border-radius: 2.2rem;
+    cursor: pointer;
+    transition: .2s;
+}
+.btn:hover{
+    box-shadow: 0 0 1.5rem var(--blue-color);
+}
+.img{
+    width: 34vw;
+}
+.About{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 8rem;
+}
+.title{
+    font-size: 7rem;
+    color: var(--text-color);
+}
+.title span{
+    color: var(--blue-color);
+}
+.About .text-box{
+    width: 50%;
+}
+.About .text-box h1:nth-child(2){
+    color: var(--blue-color);
+    font-size: 4rem;
+}
+.About .text-box p{
+    font-size: 1.4rem;
+    margin: 2.5rem 0;
+    color: var(--text-color);
+}
+.Services{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 4rem;
+}
+.Services .card-box{
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.Services .card-box .card{
+    flex: 1 1 30rem;
+    height: 43rem;
+    background-color: var(--item-bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 1.5rem;
+    padding: 0 2rem;
+    gap: 2.5rem;
+    transition: .2s;
+}
+.Services .card-box .card:hover{
+    transform: scale(1.03);
+    background-color: var(---second-item-bg-color);
+}
+.Services .card-box .card h1{
+    font-size: 3rem;
+}
+.Services .card-box .card i{
+    font-size: 8rem;
+}
+.Services .card-box .card p{
+    font-size: 1.3rem;
+}
+.Portfolio{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.Portfolio .content-box{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    color: var(--text-color);
+    gap: 2.5rem;
+}
+.Portfolio .img-box{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    border-radius: 1.6rem;
+}
+.Portfolio .img-box img{
+    width: 100%;
+    transition: .3s;
+}
+.Portfolio .img-box span{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    transform: translateY(150%);
+    border-radius: 1.6rem;
+    background: linear-gradient(rgba(0,0,0,.5),rgba(20,161,232,.8));
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.3rem;
+    transition: .2s;
+    z-index: 3;
+    font-size: 1.6rem;
+}
+.Portfolio .img-box span i{
+    font-size: 2.5rem;
+    padding: .8rem;
+    background-color: var(--text-color);
+    color: black;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.Portfolio .img-box:hover img{
+    transform: scale(1.06);
+}
+.Portfolio .img-box:hover span{
+    transform: translateY(0%);
+}
+.Contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0 27%;
+}
+.Contact .form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+.Contact .input-box{
+    width: 100%;
+    height: 5.5rem;
+    display: flex;
+    justify-content: center;
+    gap: 1.2rem;
+}
+.Contact .input-box input{
+    width: 50%;
+    height: 100%;
+    padding: 2%;
+}
+.Contact .form textarea{
+    width: 100%;
+    height: 28rem;
+    padding: 2%;
+    display: block;
+    font-size: 1.6rem;
+    resize: none;
+}
+.Contact .form textarea,
+.Contact .form .input-box input{
+    background-color: var(---second-item-bg-color);
+    border: none;
+    outline: none;
+    color: var(--text-color);
+    border-radius: .5rem;
+}
+.Contact .form textarea::placeholder,
+.Contact .form .input-box input::placeholder{
+    color: var(--text-color);
+    font-size: 1.6rem;
+}
+.Contact input[type = "submit"]{
+    width: 21rem;
+    margin-top: .8rem;
+}
+@media (max-width : 1200px) {
+    html{
+        font-size: 56%;
+    }
+    .Contact{
+        padding: 0 22%;
+    }
+}
+@media (max-width : 1020px) {
+    header{
+        padding: 1.5rem 5rem;
+    }
+    section{
+        padding: 0 5%;
+    }
+    .Portfolio .img-box span{
+        font-size: 1.4rem;
+    }
+}
+@media (max-width : 850px) {
+    .Home{
+        flex-direction: column;
+        height: auto;
+        gap: 2rem;
+        padding: 12rem 0;
+    }
+    .Home .content-box{
+        width: 70%;
+    }
+    .img{
+        width: 50vw;
+    }
+    .About{
+        flex-direction: column-reverse;
+        gap: 1rem;
+        padding: 12rem 0;
+    }
+    .About .text-box{
+        width: 70%;
+    }
+    .Portfolio .img-box span{
+        font-size: 1rem;
+    }
+    header #menu{
+        display: block;
+        font-size: 4rem;
+    }
+    header nav{
+        position: absolute;
+        left: 0;
+        top: 100%;
+        background-color: var(--bg-color);
+        width: 100%;
+        padding: .5rem 5rem;
+        box-shadow: 0 .8rem 1rem rgba(0,0,0,.5);
+        display: none;
+    }
+    header .active{
+        display: block;
+    }
+    header nav a{
+        display: block;
+        margin: 3rem 0;
+        font-size: 2.5rem;
+    }
+}
+@media (max-width : 750px) {
+    html{
+        font-size: 48%;
+    }
+    .Portfolio .content-box{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .Contact{
+        padding: 0 5%;
+    }
+    .Contact .input-box{
+        height: 7rem;
+    }
+    .Contact .form .btn{
+        width: 25rem;
+        height: 5.5rem;
+        border-radius: 6rem;
+        font-size: 2.5rem;
+    }
+    .Portfolio .img-box span{
+        font-size: 1.4rem;
+    }
+}
+@media (max-width : 500px) {
+    .img{
+        width: 70vw;
+    }
+    .Portfolio{
+        padding: 12rem 8%;
+    }
+    .Portfolio .content-box{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .Portfolio .img-box span{
+        font-size: 2rem;
+    }
+    .Portfolio .img-box span i{
+        font-size: 3rem;
+        padding: 1rem;
+    }
+}
+@media (max-width : 400px) {
+    html{
+        font-size: 40%;
+    }
+    .img{
+        width: 80vw;
+    }
+    .Contact .input-box{
+        height: 15rem;
+        flex-wrap: wrap;
+        margin-bottom: 1rem;
+    }
+    .Contact .input-box input{
+        width: 100%;
+        height: 50%;
+    }
+    .Contact .input-box input,
+    .Contact .form textarea{
+        padding: 5%;
+    }
+    .Contact .input-box input::placeholder,
+    .Contact .form textarea::placeholder{
+        font-size: 2rem;
+    }
+}
